@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    
+    char *strings[3] = {"One", "Two", "Three"};
+    char **d_ptr = strings; 
+    char *third_string_ptr = *(d_ptr + 2);
+    printf("The third string stored in the array is: %s\n", third_string_ptr);
+
+    return 0;
+}
