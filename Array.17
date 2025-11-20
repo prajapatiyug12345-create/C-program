@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int size = 10;
+    int current_elements = 10; 
+    int arr[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int i;
+
+    printf("Original array (10 elements): 10 20 30 40 50 60 70 80 90 100\n");
+
+    if (current_elements > 0) {
+        current_elements--;
+        printf("\nArray after deleting value from the last position:\n");
+        for (i = 0; i < current_elements; i++) {
+            printf("%d ", arr[i]); 
+        }
+        printf("\n");
+        
+    } else {
+        printf("\nError: Array is empty. Cannot delete.\n");
+    }
+
+    return 0;
+}
