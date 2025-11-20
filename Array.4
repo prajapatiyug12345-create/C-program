@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int notes[] = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+    int num_notes = 9;
+    long int amount; 
+    int i, count;
+
+    printf("Enter the amount (e.g., 1256): ");
+    scanf("%ld", &amount);
+
+    printf("\nMinimum notes required for %ld:\n", amount);
+    for (i = 0; i < num_notes; i++) {
+        if (amount >= notes[i]) {
+            count = amount / notes[i];
+            
+            printf("%d note(s) of %d Rs.\n", count, notes[i]);
+            amount = amount % notes[i];
+        }
+    }
+    if (amount > 0) {
+        printf("Remaining amount (cannot be covered by available notes): %ld\n", amount);
+    }
+    
+    return 0;
+}
