@@ -12,7 +12,7 @@ int main() {
 
     
     printf("\nPattern B:\n");
-    for(i = 1, j = 5; i <= 3; i++, j--) {
+    for(i = 1, j = 5; i <= 3, j >= 3; i++, j--) {
         printf("%d %d\n", j, i);
     }
 
