@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int size = 10;
+    int current_elements = 10; 
+    int arr[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int position, i;
+
+    printf("Original array (10 elements): 10 20 30 40 50 60 70 80 90 100\n");
+    printf("Enter the 0-based position (0-9) to delete: ");
+    scanf("%d", &position);
+    if (position >= 0 && position < current_elements) {
+        for (i = position; i < current_elements - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        current_elements--;
+        printf("\nArray after deleting value from position %d:\n", position);
+        for (i = 0; i < current_elements; i++) {
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
+        
+    } else {
+        printf("\nError: Invalid position or array is empty.\n");
+    }
+
+    return 0;
+}
