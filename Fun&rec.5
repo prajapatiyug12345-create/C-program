@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void findAndSetMinMax(int arr[], int size, int *max_ptr, int *min_ptr) {
+    if (size <= 0) return;
+    
+    *max_ptr = arr[0];
+    *min_ptr = arr[0];
+    
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > *max_ptr) {
+            *max_ptr = arr[i];
+        }
+        if (arr[i] < *min_ptr) {
+            *min_ptr = arr[i];
+        }
+    }
+}
+
+int main() {
+    int data[] = {45, 12, 89, 5, 67, 33};
+    int n = sizeof(data) / sizeof(data[0]);
+    int max_val = 0;
+    int min_val = 0;
+
+    findAndSetMinMax(data, n, &max_val, &min_val);
+
+    printf("Array elements: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", data[i]);
+    }
+    printf("\n");
+    printf("Maximum value found: %d\n", max_val);
+    printf("Minimum value found: %d\n", min_val);
+    
+    return 0;
+}
