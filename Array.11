@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int size = 10;
+    int Original[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int Shifted[10] = {0}; // Initialize result array to 0s for padding
+    int n, i;
+
+    printf("Original Array: 1 2 3 4 5 6 7 8 9 10\n");
+    printf("Enter the number of positions to RIGHT shift (n): ");
+    scanf("%d", &n);
+    n = n % size; 
+    for (i = 0; i < size; i++) {
+        int new_index = (i + n); 
+        
+        if (new_index < size) {
+            Shifted[new_index] = Original[i];
+        }
+        
+    }
+    printf("\nArray shifted RIGHT by %d positions (Padded with 0):\n", n);
+    for (i = 0; i < size; i++) {
+        printf("%d ", Shifted[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
