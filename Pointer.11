@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    
+    int size = sizeof(arr) / sizeof(arr[0]); 
+
+    
+    int *start_ptr = arr; 
+    
+    int *end_ptr = arr + size; 
+
+    printf("Array elements in reverse order:\n");
+    
+    
+    end_ptr--; 
+    while (end_ptr >= start_ptr) {
+        printf("%d ", *end_ptr);
+        end_ptr--; 
+    }
+    printf("\n");
+    
+    return 0;
+}
