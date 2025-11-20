@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+double add(double a, double b) {
+    return a + b;
+}
+
+double subtract(double a, double b) {
+    return a - b;
+}
+
+double multiply(double a, double b) {
+    return a * b;
+}
+
+double divide(double a, double b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        printf("Error: Division by zero\n");
+        return 0;
+    }
+}
+
+int main() {
+    char op;
+    double n1, n2;
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &op);
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &n1, &n2);
+
+    switch(op) {
+        case '+':
+            printf("%.2lf + %.2lf = %.2lf\n", n1, n2, add(n1, n2));
+            break;
+        case '-':
+            printf("%.2lf - %.2lf = %.2lf\n", n1, n2, subtract(n1, n2));
+            break;
+        case '*':
+            printf("%.2lf * %.2lf = %.2lf\n", n1, n2, multiply(n1, n2));
+            break;
+        case '/':
+            printf("%.2lf / %.2lf = %.2lf\n", n1, n2, divide(n1, n2));
+            break;
+        default:
+            printf("Error! Operator is not correct\n");
+    }
+    return 0;
+}
