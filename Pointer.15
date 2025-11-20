@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "PROGRAMMING";
+    int len = strlen(str);
+    
+    char *middle_ptr = &str[len / 2]; 
+    char *remainder_ptr = middle_ptr;
+
+    printf("15. Original string: %s\n", str);
+    printf("Remainder of string (starting from '%c'): ", *middle_ptr);
+    printf("%s\n", remainder_ptr);
+    
+    return 0;
+}
