@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int Source[5] = {10, 20, 30, 40, 50}; 
+    int Destination[10] = {0}; 
+    int i, dest_i = 0;
+
+    printf("Source Array: 10 20 30 40 50\n");
+    for (i = 0; i < 5; i++) {
+        
+        Destination[dest_i] = Source[i];
+        dest_i = dest_i + 2;
+        if (dest_i >= 10) {
+            break; 
+        }
+    }
+    printf("Destination Array (Skipping one position):\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", Destination[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
