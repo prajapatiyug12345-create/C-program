@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int size = 10;
+    int current_elements = 9; 
+    int arr[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+    int new_number, position, i;
+
+    printf("Original array (9 elements): 10 20 30 40 50 60 70 80 90\n");
+    printf("Enter the number to insert: ");
+    scanf("%d", &new_number);
+    printf("Enter the 0-based position (0-9) to insert at: ");
+    scanf("%d", &position);
+    if (position >= 0 && position <= current_elements && current_elements < size) {
+        for (i = current_elements - 1; i >= position; i--) {
+            arr[i + 1] = arr[i];
+        }
+        arr[position] = new_number;
+        current_elements++;
+        printf("\nArray after insertion:\n");
+        for (i = 0; i < current_elements; i++) {
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
+        
+    } else {
+        printf("\nError: Invalid position or array is full.\n");
+    }
+
+    return 0;
+}
