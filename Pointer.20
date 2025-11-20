@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int value = 500;
+    int *p1 = &value;
+    int **p2 = &p1;
+    int ***p3 = &p2;
+
+    printf("20. Pointer Address Chain:\n");
+    printf("p3 address: %p, p3 points to (address of p2): %p\n", (void *)&p3, (void *)p3); 
+    printf("p2 address: %p, p2 points to (address of p1): %p\n", (void *)&p2, (void *)p2);  
+    printf("p1 address: %p, p1 points to (address of value): %p\n", (void *)&p1, (void *)p1);
+    printf("Value address: %p, Value: %d\n", (void *)&value, value);
+    printf("Value retrieved by *p1: %d\n", *p1);
+    printf("Value retrieved by **p2: %d\n", **p2);
+    printf("Value retrieved by ***p3: %d\n", ***p3);
+    
+    return 0;
+}
