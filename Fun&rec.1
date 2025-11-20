@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+long long power(int base, int exp) {
+    long long result = 1;
+    while (exp != 0) {
+        result *= base;
+        --exp;
+    }
+    return result;
+}
+
+int main() {
+    int a, b;
+    printf("Enter base (a): ");
+    scanf("%d", &a);
+    printf("Enter exponent (b): ");
+    scanf("%d", &b);
+    printf("%d raised to the power of %d is: %lld\n", a, b, power(a, b));
+    return 0;
+}
