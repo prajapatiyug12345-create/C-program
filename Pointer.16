@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    int *start_ptr = arr;           
+    int *end_ptr = arr + n - 1;     
+    
+    printf("16. Pairs (forward/backward) summing to %d:\n", arr[0] + arr[n-1]);
+    
+    while (start_ptr < end_ptr) {
+        printf("    Pair: (%d, %d)\n", *start_ptr, *end_ptr);
+        start_ptr++;
+        end_ptr--;
+    }
+    
+    return 0;
+}
