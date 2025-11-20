@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int data[] = {100, 200, 300, 400};
+    int n = sizeof(data) 
+    int *ptr_arr[4]; 
+    for (int i = 0; i < n; i++) {
+        ptr_arr[i] = &data[i];
+    }
+
+    printf("19. Printing values using double dereferencing:\n");
+
+    for (int i = 0; i < n; i++) {
+        printf("    Value at index %d: %d\n", i, **(ptr_arr + i));
+    }
+    
+    return 0;
+}
