@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int source_arr[5] = {1, 2, 3, 4, 5};
+    int dest_arr[5];
+    int size = 5;
+    int i;
+    
+    int *src_ptr = source_arr; 
+    int *dest_ptr = dest_arr; 
+    for (i = 0; i < size; i++) {
+        // Copy the value from source to destination
+        *(dest_ptr + i) = *(src_ptr + i); 
+    }
+
+    printf("Contents of the destination array:\n");
+    for (i = 0; i < size; i++) {
+        printf("%d ", dest_arr[i]);
+    }
+    printf("\n");
+    
+    return 0;
+}
