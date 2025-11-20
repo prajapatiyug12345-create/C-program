@@ -1,0 +1,13 @@
+#include <stdio.h>
+#define NULL ((void *)0) 
+
+int main() {
+    int *ptr = NULL; 
+
+    if (ptr == NULL) {
+        printf("The pointer is NULL (it does not point to a valid memory address).\n");
+    } else {
+        printf("The pointer is NOT NULL.\n");
+    }
+    return 0;
+}
