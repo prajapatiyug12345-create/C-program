@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i;
+    int count_a = 0, count_e = 0, count_i = 0, count_o = 0, count_u = 0;
+    
+    printf("Enter a string: ");
+    scanf("%[^\n]s", str);
+    for (i = 0; str[i] != '\0'; i++) {
+        char ch = str[i];
+        
+        if (ch == 'a' || ch == 'A') {
+            count_a++;
+        } else if (ch == 'e' || ch == 'E') {
+            count_e++;
+        } else if (ch == 'i' || ch == 'I') {
+            count_i++;
+        } else if (ch == 'o' || ch == 'O') {
+            count_o++;
+        } else if (ch == 'u' || ch == 'U') {
+            count_u++;
+        }
+    }
+    
+    printf("--- Vowel Frequencies ---\n");
+    printf("A/a: %d\n", count_a);
+    printf("E/e: %d\n", count_e);
+    printf("I/i: %d\n", count_i);
+    printf("O/o: %d\n", count_o);
+    printf("U/u: %d\n", count_u);
+    
+    return 0;
+}
