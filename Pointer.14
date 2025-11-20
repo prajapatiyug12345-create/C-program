@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20};
+    int *ptr1 = &arr[0];
+    int *ptr2 = &arr[1];
+
+    printf("14. Before swap: arr[0]=%d, arr[1]=%d\n", *ptr1, *ptr2);
+
+    
+    *ptr1 = *ptr1 ^ *ptr2; 
+    *ptr2 = *ptr1 ^ *ptr2; 
+    *ptr1 = *ptr1 ^ *ptr2; 
+
+    printf("After swap: arr[0]=%d, arr[1]=%d\n", *ptr1, *ptr2);
+    
+    return 0;
+}
