@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void printNumbersRecursive(int start, int end) {
+    if (start > end) {
+        return;
+    }
+    printf("%d ", start);
+    printNumbersRecursive(start + 1, end);
+}
+
+int main() {
+    int start = 1;
+    int end = 10;
+    printf("Numbers from %d to %d using recursion: ", start, end);
+    printNumbersRecursive(start, end);
+    printf("\n");
+    return 0;
+}
