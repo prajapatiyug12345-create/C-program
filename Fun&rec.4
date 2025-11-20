@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void swapByValue(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    printf("Inside swapByValue: a = %d, b = %d\n", a, b);
+}
+
+int main() {
+    int num1 = 10, num2 = 20;
+    printf("Before swap (main): num1 = %d, num2 = %d\n", num1, num2);
+    swapByValue(num1, num2);
+    printf("After swap (main): num1 = %d, num2 = %d\n", num1, num2);
+    return 0;
+}
